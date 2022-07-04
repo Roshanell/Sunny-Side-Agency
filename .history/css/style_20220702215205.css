@@ -1,0 +1,395 @@
+/* Box Model Hack */
+* {
+  -moz-box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+/* general body */
+body {
+  font-size: 18px;
+  font-family: "Barlow", sans-serif;
+  text-align: center;
+}
+p {
+  color: hsl(232, 10%, 55%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+}
+
+h3 {
+  margin-top: 10%;
+  margin-bottom: 10%;
+  font-size: 40px;
+}
+
+span a {
+  margin-bottom: 15%;
+}
+
+/* hamburger */
+.menuItem {
+  display: block;
+  margin: 2rem 4rem;
+  font-size: 1.8rem;
+  color: white;
+  text-decoration: none;
+}
+
+.menuItem:hover {
+  text-decoration: underline;
+}
+
+.hamburger {
+  position: fixed;
+  z-index: 100;
+  top: 1rem;
+  right: 1rem;
+  padding: 4px;
+  border: black solid 1px;
+  background: white;
+  cursor: pointer;
+}
+
+.closeIcon {
+  display: none;
+}
+
+.menu {
+  position: fixed;
+  transform: translateY(-100%);
+  transition: transform 0.2s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: black;
+  color: white;
+  list-style: none;
+  padding-top: 4rem;
+}
+
+.showMenu {
+  transform: translateY(0);
+}
+
+/* homepage */
+
+.homePage {
+  background-image: url("https://i.imgur.com/HUEIjty.jpg");
+  background-size: contain;
+  /* height: 100vh; */
+  background-repeat: no-repeat;
+}
+
+.homeSlogan {
+  color: white;
+  font-size: 30px;
+}
+/* About Us */
+.aboutUsInfo {
+  background-color: white;
+}
+.aboutUsInfo h3 {
+  font-size: 40px;
+}
+/* testimonials */
+/* user profile images */
+.user {
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  margin: 9%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.one {
+  background-image: url("https://i.imgur.com/0PxR98W.jpg");
+}
+
+.two {
+  background-image: url("https://i.imgur.com/01xgLPA.jpg");
+}
+
+.three {
+  background-image: url("https://i.imgur.com/YJGOYO1.jpg");
+}
+
+.testimonialOne h4 {
+  text-transform: uppercase;
+  color: hsl(210, 4%, 67%);
+  letter-spacing: 4px;
+  font-size: 80%;
+}
+
+.occupation {
+  color: hsl(210, 4%, 67%);
+}
+
+.name {
+  font-family: "Barlow", sans-serif;
+  font-size: large;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+.container {
+  border: solid 1px blue;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.75fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: column dense;
+  grid-template-areas:
+    "homePage"
+    "eggArea"
+    "aboutUsInfo"
+    "cupImage"
+    "standOutInfo"
+    "graphicDesign"
+    "orangeImage"
+    "testimonialOne"
+    "testimonialTwo"
+    "testimonialThree"
+    "fourImgs"
+    "footer";
+}
+
+.homePage {
+  border: solid 1px red;
+  /* display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "header";
+  grid-area: homePage; */
+}
+
+.header {
+  display: flex;
+  border: solid 1px orange;
+  grid-area: header;
+  color: white;
+}
+
+.homeContent {
+  border: solid 1px yellow;
+  grid-area: homeContent;
+  margin-top: 15%;
+}
+
+.eggArea {
+  border: solid 1px purple;
+  grid-area: eggArea;
+  background-image: url("https://i.imgur.com/Ic0Kukn.jpg");
+  /* height: 40vh; */
+  background-size: cover;
+}
+
+.aboutUsInfo {
+  border: solid 1px green;
+  /* height: 40vh; */
+  grid-area: aboutUsInfo;
+}
+
+.cupImage {
+  border: solid 1px pink;
+  /* height: 40vh; */
+  grid-area: cupImage;
+  background-image: url("https://i.imgur.com/TEIjlB8.jpg");
+  background-size: cover;
+}
+
+.standOutInfo {
+  border: solid 1px black;
+  grid-area: standOutInfo;
+  /* height: 40vh; */
+}
+
+.graphicDesign {
+  border: solid 1px brown;
+  grid-area: graphicDesign;
+  background-image: url("https://i.imgur.com/ceaL6cl.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-end;
+  align-items: center;
+  /* height: 40vh; */
+}
+
+.orangeImage {
+  border: solid 1px gray;
+  grid-area: orangeImage;
+  background-image: url("https://i.imgur.com/5lTcoMD.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-end;
+  align-items: center;
+}
+/* height: 40vh; */
+
+.testimonialOne {
+  border: solid 1px fuchsia;
+  grid-area: testimonialOne;
+  /* height: 33vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonialThree {
+  border: solid 1px lightblue;
+  grid-area: testimonialThree;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 33vh; */
+}
+
+.testimonialTwo {
+  border: solid 1px silver;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: testimonialTwo;
+
+  /* height: 33vh; */
+}
+
+.fourImgs {
+  border: solid 1px maroon;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "imgOne imgThree"
+    "imgTwo imgFour";
+  grid-area: fourImgs;
+  /* height: 40vh; */
+}
+
+.imgOne {
+  border: solid 1px yellowgreen;
+  background-image: url("https://i.imgur.com/g7g3pHI.jpg");
+  background-size: cover;
+}
+.imgTwo {
+  border: solid 1px rgb(228, 122, 199);
+  background-image: url("https://i.imgur.com/xXvVali.jpg");
+  background-size: cover;
+}
+.imgThree {
+  border: solid 1px rgb(158, 207, 232);
+  background-image: url("https://i.imgur.com/w22eeJU.jpg");
+  background-size: cover;
+}
+.imgFour {
+  border: solid 1px rgb(205, 122, 50);
+  background-image: url("https://i.imgur.com/hMYShPr.jpg");
+  background-size: cover;
+}
+
+/* Fix the footer 
+
+
+.footer {
+  border: solid 1px blue;
+  display: grid;
+  grid-auto-flow: column dense;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". logoName ."
+    "about services projects"
+    ". logo .";
+  grid-area: footer;
+}
+.logoName {
+  grid-area: logoName;
+}
+.about {
+  grid-area: about;
+}
+.services {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-area: services;
+}
+.projects {
+  grid-area: projects;
+}
+.logo {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "fbIcon igIcon twitterIcon pinterest";
+  grid-area: logo;
+}
+
+.fbIcon {
+  border: solid 1px silver;
+  grid-area: fbIcon;
+}
+.igIcon {
+  border: solid 1px red;
+  grid-area: fbIcon;
+}
+.twitterIcon {
+  border: solid 1px midnightblue;
+  grid-area: twitterIcon;
+}
+.pinterest {
+  border: solid 1px plum;
+  grid-area: pinterest;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

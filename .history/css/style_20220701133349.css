@@ -1,0 +1,221 @@
+/* Box Model Hack */
+* {
+  -moz-box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+/* hamburger */
+.hamburger {
+  position: fixed;
+  z-index: 100;
+  top: 1rem;
+  right: 1rem;
+  padding: 4px;
+  border: black solid 1px;
+  background: white;
+  cursor: pointer;
+}
+
+.closeIcon {
+  display: none;
+}
+
+
+body {
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+.container {
+  border: solid 1px blue;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: column dense;
+  grid-template-areas:
+    "homePage"
+    "eggArea"
+    "aboutUsInfo"
+    "cupImage"
+    "standOutInfo"
+    "graphicDesign"
+    "orangeImage"
+    "testimonialOne"
+    "testimonialTwo"
+    "testimonialThree"
+    "fourImgs"
+    "footer";
+}
+
+.homePage {
+  border: solid 1px red;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header"
+    "homeContent";
+  grid-area: homePage;
+}
+
+.header {
+  border: solid 1px orange;
+  grid-area: header;
+}
+
+.homeContent {
+  border: solid 1px yellow;
+  grid-area: homeContent;
+}
+
+.eggArea {
+  border: solid 1px purple;
+  grid-area: eggArea;
+}
+
+.aboutUsInfo {
+  border: solid 1px green;
+  grid-area: aboutUsInfo;
+}
+
+.cupImage {
+  border: solid 1px pink;
+  grid-area: cupImage;
+}
+
+.standOutInfo {
+  border: solid 1px black;
+  grid-area: standOutInfo;
+}
+
+.graphicDesign {
+  border: solid 1px brown;
+  grid-area: graphicDesign;
+}
+
+.orangeImage {
+  border: solid 1px gray;
+  grid-area: orangeImage;
+}
+
+.testimonialOne {
+  border: solid 1px fuchsia;
+  grid-area: testimonialOne;
+}
+
+.testimonialThree {
+  border: solid 1px lightblue;
+  grid-area: testimonialThree;
+}
+
+.testimonialTwo {
+  border: solid 1px silver;
+  grid-area: testimonialTwo;
+}
+
+.fourImgs {
+  border: solid 1px maroon;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "imgOne imgThree"
+    "imgTwo imgFour";
+  grid-area: fourImgs;
+}
+
+.imgOne {
+  border: solid 1px yellowgreen;
+}
+.imgTwo {
+  border: solid 1px rgb(228, 122, 199);
+}
+.imgThree {
+  border: solid 1px rgb(158, 207, 232);
+}
+.imgFour {
+  border: solid 1px rgb(205, 122, 50);
+}
+
+/* Fix the footer 
+
+
+.footer {
+  border: solid 1px blue;
+  display: grid;
+  grid-auto-flow: column dense;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". logoName ."
+    "about services projects"
+    ". logo .";
+  grid-area: footer;
+}
+.logoName {
+  grid-area: logoName;
+}
+.about {
+  grid-area: about;
+}
+.services {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-area: services;
+}
+.projects {
+  grid-area: projects;
+}
+.logo {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "fbIcon igIcon twitterIcon pinterest";
+  grid-area: logo;
+}
+
+.fbIcon {
+  border: solid 1px silver;
+  grid-area: fbIcon;
+}
+.igIcon {
+  border: solid 1px red;
+  grid-area: fbIcon;
+}
+.twitterIcon {
+  border: solid 1px midnightblue;
+  grid-area: twitterIcon;
+}
+.pinterest {
+  border: solid 1px plum;
+  grid-area: pinterest;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
