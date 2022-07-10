@@ -1,0 +1,114 @@
+/* Box Model Hack */
+* {
+  -moz-box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+
+
+
+
+
+
+
+
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+  .homePage,
+  .homeContent {
+    border: 1px solid black;
+  }
+
+  .eggArea {
+    border: 1px solid red;
+    height: 150px;
+    width: 49.5%;
+    float: right;
+  }
+  .aboutUsInfo {
+    border: 1px solid red;
+    height: 150px;
+    width: 49.5%;
+    float: left;
+  }
+  .cupImage {
+    float: left;
+    height: 150px;
+    width: 49.5%;
+    border: 1px solid red;
+  }
+  .standOutInfo {
+    float: right;
+    height: 150px;
+    width: 49.5%;
+    border: 1px solid red;
+  }
+
+  .graphicDesign {
+    float: left;
+    height: 150px;
+    width: 49.5%;
+    border: 1px solid green;
+  }
+
+  .orangeImage {
+    float: right;
+    height: 150px;
+    width: 49.5%;
+    border: 1px solid blue;
+  }
+
+  .testimonialOne {
+    float: left;
+    height: 150px;
+    width: 33.1%;
+    border: 1px solid pink;
+  }
+
+  .testimonialTwo {
+    float: left;
+    height: 150px;
+    width: 33.1%;
+    border: 1px solid pink;
+  }
+
+  .testimonialThree {
+    float: left;
+    height: 150px;
+    width: 33.1%;
+    border: 1px solid pink;
+  }
+
+  .footer {
+    float: left;
+    height: 200px;
+    width: 100%;
+    border: 1px solid pink;
+  }
+}
