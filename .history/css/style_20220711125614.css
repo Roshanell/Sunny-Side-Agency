@@ -301,13 +301,14 @@ span a {
     float: right;
     height: 60vh;
     width: 47vw;
-    display: flex;
+    /* border: 1px solid red; */
   }
 
   .standOutContainer {
     width: 70%;
     margin: auto;
     text-align: left;
+    margin-top: 15%;
   }
   .graphicDesign {
     background-image: url("https://i.imgur.com/ypGUgU9.jpg");
@@ -568,7 +569,7 @@ span a {
     /* border: solid 1px blue; */
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1.5fr 1.4fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1.5fr 1fr 1fr 1fr 1fr 1.5fr 1.4fr 1fr 1fr 1fr 1fr;
     gap: 0px 0px;
     grid-auto-flow: column dense;
     grid-template-areas:
