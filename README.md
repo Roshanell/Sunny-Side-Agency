@@ -1,6 +1,5 @@
-# Frontend Mentor - Sunnyside agency landing page solution
 
-This is a solution to the [Sunnyside agency landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+#![Recording 2022-07-13 at 19 08 12](https://user-images.githubusercontent.com/96213223/180039921-a6d5c8d5-b3c7-47e1-9a3b-0ed06ed57a1a.gif)
 
 ## Table of contents
 
@@ -46,7 +45,7 @@ Users should be able to:
 
 With this website, I was able to make my webpage responsive by starting with a mobile first designs. Initially, I began learning layouts with floats, then transitioned to Flexbox. In this project, I was able to get my hands dirty with CSS Grid and for the desktop layout complete that with floats.
 
-I learned that I can still utilize flexbox properties on items inside of CSS grid to help align content and more! This is thefirst website that I made that is responsive for both mobile and desktop devices.
+I learned that I can still utilize flexbox properties on items inside of CSS grid to help align content and more! This is the first website that I made that is responsive for both mobile and desktop devices.
 
 ### Continued development
 
